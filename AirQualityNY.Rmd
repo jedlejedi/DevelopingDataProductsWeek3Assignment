@@ -1,0 +1,19 @@
+---
+title: "Air Quality in New York"
+author: Julien Lafontaine
+date: 14 May 2017
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Ozone Levels in 1973
+The chart below shows the change in Ozone levels between May and September 1973.
+```{r message=FALSE, warning=FALSE}
+library(plotly)
+plot_ly(data = airquality, y = ~Ozone, color = ~factor(Month), type = "box")
+```
+
+## Thank you
